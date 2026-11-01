@@ -27,3 +27,11 @@ fragment T:      't'|'T';
 fragment U:      'u'|'U';
 fragment W:      'w'|'W';
 fragment Y:      'y'|'Y';
+
+Up:         U P;
+Down:       D O W N;
+Left:       L E F T;
+Right:      R I G H T;
+Init:       I N I T;
+Draw:       D R A W;
+Display:    D I S P L A Y;
