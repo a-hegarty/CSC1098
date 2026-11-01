@@ -1,0 +1,5 @@
+init 10 10
+draw
+down right right draw
+down left draw
+display
