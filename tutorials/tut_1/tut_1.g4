@@ -35,3 +35,7 @@ Right:      R I G H T;
 Init:       I N I T;
 Draw:       D R A W;
 Display:    D I S P L A Y;
+
+NUMBER:     [0-9]+;
+
+WS:         [ \t\n\r]+ -> skip;
