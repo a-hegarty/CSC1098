@@ -8,7 +8,7 @@ public class draw
 {
     public static void main(String[] args) throws Exception
     {
-        String inputFile = null
+        String inputFile = null;
         if (args.length > 0)
         {
             inputFile = args[0];
@@ -25,6 +25,6 @@ public class draw
 
         //parser
         drawParser parser = new drawParser(tokens);
-        ParseTree tree = parser.prog()
+        ParseTree tree = parser.prog();
     }
 }
