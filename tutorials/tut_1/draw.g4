@@ -1,6 +1,6 @@
 grammar draw;
 
-prog:   stm*
+prog:   stm*;
 stm:    Init NUMBER NUMBER #Init
     | Up # up
     | Down # down
