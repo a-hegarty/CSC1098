@@ -125,17 +125,17 @@ COMMA:      ",";
 COLON:      ":";
 LBR:        "(";
 RBR:        ")";
-PLUS: '+';
-MINUS: '-';
-NEG: '~';
-OR: '|';
-AND: '&';
-EQUAL: '=';
-NONEQ: '!=';
-LESS: '<';
-LE: '<=';
-GREATER: '>';
-GE: '>=';
+PLUS:       "+";
+MINUS:      "-";
+NEG:        "~";
+OR:         "|";
+AND:        "&";
+EQUAL:      "=";
+NONEQ:      "!=";
+LESS:       "<";
+LE:         "<=";
+GREATER:    ">";
+GE:         ">=";
 
 ID:     Letter (Letter | Digit | UnderScore)
 WS:     [ \t\n\r]+->skip;
