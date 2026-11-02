@@ -36,7 +36,7 @@ statement:  ID ASSIGN expr COLON
 expr:   frag bin_arith_op frag
     | LBR expr RBR
     | ID LBR arg_list RBR
-    | frag
+    | LBR frag RBR
     ;
 
 bin_arith_op:   PLUS
@@ -47,7 +47,7 @@ frag:   ID
     | MINUS ID
     | True
     | False
-    | expr
+    | LBR expr RBR
     ;
 
 condition:  NEG condition
@@ -123,6 +123,7 @@ Skip:       S K I P;
 
 // symbols
 ASSIGN:     ':=';
+SEMI:       ';';
 COMMA:      ',';
 COLON:      ':';
 LBR:        '(';
