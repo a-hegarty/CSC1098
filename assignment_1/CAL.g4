@@ -1,5 +1,24 @@
 grammar CAL   
 
+prog:   stm*;
+stm:    Variable    # Variable
+    | Constant  # Constant
+    | Return    # Return
+    | Integer   # Integer
+    | Boolean   # Boolean
+    | Void      # Void
+    | Main      # Main
+    | If        # If
+    | Else      # Else
+    | True      # True
+    | False     # False
+    | While     # While
+    | Begin     # Begin
+    | End       # End
+    | Is        # Is
+    | Skip      # Skip
+    ;
+
 fragment A:      'a'|'A';
 fragment B:      'b'|'B';
 fragment C:      'c'|'C';
