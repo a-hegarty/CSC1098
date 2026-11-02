@@ -11,7 +11,7 @@ var_dec:    Variable ID COLON type;
 const_dec:  Constant ID COLON type ASSIGN expr;
 
 func_list:  (func*);
-func:   type ID (param_list) Is dec_list Begin statement_block return LBR (expr*) RBR COLON End;
+func:   type ID LBR param_list RBR Is dec_list Begin statement_block Return LBR (expr*) RBR COLON End;
 
 type:   Integer
     | Boolean
@@ -68,3 +68,24 @@ arg_list:   nemp_arg_list*;
 nemp_arg_list:  ID
     | ID COMMA nemp_arg_list
     ;
+
+fragment Letter:   [a-zA-Z;]
+fragment Digit: [0-9]+;
+
+// reserved words
+Variable:   V A R I A B L E;
+Constant:   C O N S T A N T;
+Return:     R E T U R N;
+Integer:    I N T E G E R;
+Boolean:    B O O L E A N;
+Void:       V O I D;
+Main:       M A I N;
+If:         I F;
+Else:       E L S E;
+True:       T R U E;
+False:      F A L S E;
+While:      W H I L E;
+Begin:      B E G I N;
+End:        E N D;
+Is:         I S;
+Skip:       S K I P;
