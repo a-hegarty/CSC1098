@@ -89,3 +89,21 @@ Begin:      B E G I N;
 End:        E N D;
 Is:         I S;
 Skip:       S K I P;
+
+// symbols
+ASSIGN:     ":=";
+COMMA:      ",";
+COLON:      ":";
+LBR:        "(";
+RBR:        ")";
+PLUS: '+';
+MINUS: '-';
+NEG: '~';
+OR: '|';
+AND: '&';
+EQUAL: '=';
+NONEQ: '!=';
+LESS: '<';
+LE: '<=';
+GREATER: '>';
+GE: '>=';
