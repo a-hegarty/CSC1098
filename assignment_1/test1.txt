@@ -1,0 +1,22 @@
+variable 1: integer;
+
+integer test_fn(x:integer) Is
+    variable i:integer;
+    variable minus_sign : boolean;
+Begin
+// single line Comment
+    if (x < 0 & y >= 0)
+    begin 
+        minus_sign := true;
+        x := -x;
+    end
+    Else
+    begin
+        if y < 0 & x >= 0
+        begin
+            minus_sign := False;
+            x := -x;
+            y := -y;
+        end
+        Else
+        begin

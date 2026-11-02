@@ -54,6 +54,8 @@ condition:  NEG condition
     | LBR condition RBR
     | expr comp_op expr
     | condition (AND | OR) condition
+    | True
+    | False
     ;
 
 comp_op:    EQUAL
