@@ -1,4 +1,4 @@
-// Generated from ./CAL.g4 by ANTLR 4.13.2
+// Generated from ./cal.g4 by ANTLR 4.13.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue", "this-escape"})
-public class CALParser extends Parser {
+public class calParser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.13.2", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -89,7 +89,7 @@ public class CALParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "CAL.g4"; }
+	public String getGrammarFileName() { return "cal.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -100,7 +100,7 @@ public class CALParser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public CALParser(TokenStream input) {
+	public calParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
@@ -122,11 +122,11 @@ public class CALParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_prog; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterProg(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterProg(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitProg(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitProg(this);
 		}
 	}
 
@@ -163,9 +163,9 @@ public class CALParser extends Parser {
 		public DecContext dec(int i) {
 			return getRuleContext(DecContext.class,i);
 		}
-		public List<TerminalNode> SEMI() { return getTokens(CALParser.SEMI); }
+		public List<TerminalNode> SEMI() { return getTokens(calParser.SEMI); }
 		public TerminalNode SEMI(int i) {
-			return getToken(CALParser.SEMI, i);
+			return getToken(calParser.SEMI, i);
 		}
 		public Dec_listContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -173,11 +173,11 @@ public class CALParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_dec_list; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterDec_list(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterDec_list(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitDec_list(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitDec_list(this);
 		}
 	}
 
@@ -231,11 +231,11 @@ public class CALParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_dec; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterDec(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterDec(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitDec(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitDec(this);
 		}
 	}
 
@@ -277,9 +277,9 @@ public class CALParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Var_decContext extends ParserRuleContext {
-		public TerminalNode Variable() { return getToken(CALParser.Variable, 0); }
-		public TerminalNode ID() { return getToken(CALParser.ID, 0); }
-		public TerminalNode COLON() { return getToken(CALParser.COLON, 0); }
+		public TerminalNode Variable() { return getToken(calParser.Variable, 0); }
+		public TerminalNode ID() { return getToken(calParser.ID, 0); }
+		public TerminalNode COLON() { return getToken(calParser.COLON, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
@@ -289,11 +289,11 @@ public class CALParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_var_dec; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterVar_dec(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterVar_dec(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitVar_dec(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitVar_dec(this);
 		}
 	}
 
@@ -326,13 +326,13 @@ public class CALParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Const_decContext extends ParserRuleContext {
-		public TerminalNode Constant() { return getToken(CALParser.Constant, 0); }
-		public TerminalNode ID() { return getToken(CALParser.ID, 0); }
-		public TerminalNode COLON() { return getToken(CALParser.COLON, 0); }
+		public TerminalNode Constant() { return getToken(calParser.Constant, 0); }
+		public TerminalNode ID() { return getToken(calParser.ID, 0); }
+		public TerminalNode COLON() { return getToken(calParser.COLON, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
-		public TerminalNode ASSIGN() { return getToken(CALParser.ASSIGN, 0); }
+		public TerminalNode ASSIGN() { return getToken(calParser.ASSIGN, 0); }
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
@@ -342,11 +342,11 @@ public class CALParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_const_dec; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterConst_dec(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterConst_dec(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitConst_dec(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitConst_dec(this);
 		}
 	}
 
@@ -395,11 +395,11 @@ public class CALParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_func_list; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterFunc_list(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterFunc_list(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitFunc_list(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitFunc_list(this);
 		}
 	}
 
@@ -444,29 +444,29 @@ public class CALParser extends Parser {
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
-		public TerminalNode ID() { return getToken(CALParser.ID, 0); }
-		public List<TerminalNode> LBR() { return getTokens(CALParser.LBR); }
+		public TerminalNode ID() { return getToken(calParser.ID, 0); }
+		public List<TerminalNode> LBR() { return getTokens(calParser.LBR); }
 		public TerminalNode LBR(int i) {
-			return getToken(CALParser.LBR, i);
+			return getToken(calParser.LBR, i);
 		}
 		public Param_listContext param_list() {
 			return getRuleContext(Param_listContext.class,0);
 		}
-		public List<TerminalNode> RBR() { return getTokens(CALParser.RBR); }
+		public List<TerminalNode> RBR() { return getTokens(calParser.RBR); }
 		public TerminalNode RBR(int i) {
-			return getToken(CALParser.RBR, i);
+			return getToken(calParser.RBR, i);
 		}
-		public TerminalNode Is() { return getToken(CALParser.Is, 0); }
+		public TerminalNode Is() { return getToken(calParser.Is, 0); }
 		public Dec_listContext dec_list() {
 			return getRuleContext(Dec_listContext.class,0);
 		}
-		public TerminalNode Begin() { return getToken(CALParser.Begin, 0); }
+		public TerminalNode Begin() { return getToken(calParser.Begin, 0); }
 		public Statement_blockContext statement_block() {
 			return getRuleContext(Statement_blockContext.class,0);
 		}
-		public TerminalNode Return() { return getToken(CALParser.Return, 0); }
-		public TerminalNode COLON() { return getToken(CALParser.COLON, 0); }
-		public TerminalNode End() { return getToken(CALParser.End, 0); }
+		public TerminalNode Return() { return getToken(calParser.Return, 0); }
+		public TerminalNode COLON() { return getToken(calParser.COLON, 0); }
+		public TerminalNode End() { return getToken(calParser.End, 0); }
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
@@ -479,11 +479,11 @@ public class CALParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_func; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterFunc(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterFunc(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitFunc(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitFunc(this);
 		}
 	}
 
@@ -553,20 +553,20 @@ public class CALParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class TypeContext extends ParserRuleContext {
-		public TerminalNode Integer() { return getToken(CALParser.Integer, 0); }
-		public TerminalNode Boolean() { return getToken(CALParser.Boolean, 0); }
-		public TerminalNode Void() { return getToken(CALParser.Void, 0); }
+		public TerminalNode Integer() { return getToken(calParser.Integer, 0); }
+		public TerminalNode Boolean() { return getToken(calParser.Boolean, 0); }
+		public TerminalNode Void() { return getToken(calParser.Void, 0); }
 		public TypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_type; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterType(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitType(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitType(this);
 		}
 	}
 
@@ -614,11 +614,11 @@ public class CALParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_param_list; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterParam_list(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterParam_list(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitParam_list(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitParam_list(this);
 		}
 	}
 
@@ -658,12 +658,12 @@ public class CALParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Nemp_param_listContext extends ParserRuleContext {
-		public TerminalNode ID() { return getToken(CALParser.ID, 0); }
-		public TerminalNode COLON() { return getToken(CALParser.COLON, 0); }
+		public TerminalNode ID() { return getToken(calParser.ID, 0); }
+		public TerminalNode COLON() { return getToken(calParser.COLON, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
-		public TerminalNode COMMA() { return getToken(CALParser.COMMA, 0); }
+		public TerminalNode COMMA() { return getToken(calParser.COMMA, 0); }
 		public Nemp_param_listContext nemp_param_list() {
 			return getRuleContext(Nemp_param_listContext.class,0);
 		}
@@ -673,11 +673,11 @@ public class CALParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_nemp_param_list; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterNemp_param_list(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterNemp_param_list(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitNemp_param_list(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitNemp_param_list(this);
 		}
 	}
 
@@ -729,26 +729,26 @@ public class CALParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class MainContext extends ParserRuleContext {
-		public TerminalNode Main() { return getToken(CALParser.Main, 0); }
-		public TerminalNode Begin() { return getToken(CALParser.Begin, 0); }
+		public TerminalNode Main() { return getToken(calParser.Main, 0); }
+		public TerminalNode Begin() { return getToken(calParser.Begin, 0); }
 		public Dec_listContext dec_list() {
 			return getRuleContext(Dec_listContext.class,0);
 		}
 		public Statement_blockContext statement_block() {
 			return getRuleContext(Statement_blockContext.class,0);
 		}
-		public TerminalNode End() { return getToken(CALParser.End, 0); }
+		public TerminalNode End() { return getToken(calParser.End, 0); }
 		public MainContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_main; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterMain(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterMain(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitMain(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitMain(this);
 		}
 	}
 
@@ -795,11 +795,11 @@ public class CALParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_statement_block; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterStatement_block(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterStatement_block(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitStatement_block(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitStatement_block(this);
 		}
 	}
 
@@ -841,20 +841,20 @@ public class CALParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class StatementContext extends ParserRuleContext {
-		public TerminalNode ID() { return getToken(CALParser.ID, 0); }
-		public TerminalNode ASSIGN() { return getToken(CALParser.ASSIGN, 0); }
+		public TerminalNode ID() { return getToken(calParser.ID, 0); }
+		public TerminalNode ASSIGN() { return getToken(calParser.ASSIGN, 0); }
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
-		public TerminalNode COLON() { return getToken(CALParser.COLON, 0); }
-		public TerminalNode LBR() { return getToken(CALParser.LBR, 0); }
+		public TerminalNode COLON() { return getToken(calParser.COLON, 0); }
+		public TerminalNode LBR() { return getToken(calParser.LBR, 0); }
 		public Arg_listContext arg_list() {
 			return getRuleContext(Arg_listContext.class,0);
 		}
-		public TerminalNode RBR() { return getToken(CALParser.RBR, 0); }
-		public List<TerminalNode> Begin() { return getTokens(CALParser.Begin); }
+		public TerminalNode RBR() { return getToken(calParser.RBR, 0); }
+		public List<TerminalNode> Begin() { return getTokens(calParser.Begin); }
 		public TerminalNode Begin(int i) {
-			return getToken(CALParser.Begin, i);
+			return getToken(calParser.Begin, i);
 		}
 		public List<Statement_blockContext> statement_block() {
 			return getRuleContexts(Statement_blockContext.class);
@@ -862,28 +862,28 @@ public class CALParser extends Parser {
 		public Statement_blockContext statement_block(int i) {
 			return getRuleContext(Statement_blockContext.class,i);
 		}
-		public List<TerminalNode> End() { return getTokens(CALParser.End); }
+		public List<TerminalNode> End() { return getTokens(calParser.End); }
 		public TerminalNode End(int i) {
-			return getToken(CALParser.End, i);
+			return getToken(calParser.End, i);
 		}
-		public TerminalNode If() { return getToken(CALParser.If, 0); }
+		public TerminalNode If() { return getToken(calParser.If, 0); }
 		public ConditionContext condition() {
 			return getRuleContext(ConditionContext.class,0);
 		}
-		public TerminalNode Else() { return getToken(CALParser.Else, 0); }
-		public TerminalNode While() { return getToken(CALParser.While, 0); }
-		public TerminalNode Skip() { return getToken(CALParser.Skip, 0); }
+		public TerminalNode Else() { return getToken(calParser.Else, 0); }
+		public TerminalNode While() { return getToken(calParser.While, 0); }
+		public TerminalNode Skip() { return getToken(calParser.Skip, 0); }
 		public StatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_statement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterStatement(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitStatement(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitStatement(this);
 		}
 	}
 
@@ -1004,12 +1004,12 @@ public class CALParser extends Parser {
 		public Bin_arith_opContext bin_arith_op() {
 			return getRuleContext(Bin_arith_opContext.class,0);
 		}
-		public TerminalNode LBR() { return getToken(CALParser.LBR, 0); }
+		public TerminalNode LBR() { return getToken(calParser.LBR, 0); }
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
-		public TerminalNode RBR() { return getToken(CALParser.RBR, 0); }
-		public TerminalNode ID() { return getToken(CALParser.ID, 0); }
+		public TerminalNode RBR() { return getToken(calParser.RBR, 0); }
+		public TerminalNode ID() { return getToken(calParser.ID, 0); }
 		public Arg_listContext arg_list() {
 			return getRuleContext(Arg_listContext.class,0);
 		}
@@ -1019,11 +1019,11 @@ public class CALParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_expr; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterExpr(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterExpr(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitExpr(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitExpr(this);
 		}
 	}
 
@@ -1095,19 +1095,19 @@ public class CALParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Bin_arith_opContext extends ParserRuleContext {
-		public TerminalNode PLUS() { return getToken(CALParser.PLUS, 0); }
-		public TerminalNode MINUS() { return getToken(CALParser.MINUS, 0); }
+		public TerminalNode PLUS() { return getToken(calParser.PLUS, 0); }
+		public TerminalNode MINUS() { return getToken(calParser.MINUS, 0); }
 		public Bin_arith_opContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_bin_arith_op; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterBin_arith_op(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterBin_arith_op(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitBin_arith_op(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitBin_arith_op(this);
 		}
 	}
 
@@ -1143,26 +1143,26 @@ public class CALParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class FragContext extends ParserRuleContext {
-		public TerminalNode ID() { return getToken(CALParser.ID, 0); }
-		public TerminalNode MINUS() { return getToken(CALParser.MINUS, 0); }
-		public TerminalNode True() { return getToken(CALParser.True, 0); }
-		public TerminalNode False() { return getToken(CALParser.False, 0); }
-		public TerminalNode LBR() { return getToken(CALParser.LBR, 0); }
+		public TerminalNode ID() { return getToken(calParser.ID, 0); }
+		public TerminalNode MINUS() { return getToken(calParser.MINUS, 0); }
+		public TerminalNode True() { return getToken(calParser.True, 0); }
+		public TerminalNode False() { return getToken(calParser.False, 0); }
+		public TerminalNode LBR() { return getToken(calParser.LBR, 0); }
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
-		public TerminalNode RBR() { return getToken(CALParser.RBR, 0); }
+		public TerminalNode RBR() { return getToken(calParser.RBR, 0); }
 		public FragContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_frag; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterFrag(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterFrag(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitFrag(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitFrag(this);
 		}
 	}
 
@@ -1231,15 +1231,15 @@ public class CALParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ConditionContext extends ParserRuleContext {
-		public TerminalNode NEG() { return getToken(CALParser.NEG, 0); }
+		public TerminalNode NEG() { return getToken(calParser.NEG, 0); }
 		public List<ConditionContext> condition() {
 			return getRuleContexts(ConditionContext.class);
 		}
 		public ConditionContext condition(int i) {
 			return getRuleContext(ConditionContext.class,i);
 		}
-		public TerminalNode LBR() { return getToken(CALParser.LBR, 0); }
-		public TerminalNode RBR() { return getToken(CALParser.RBR, 0); }
+		public TerminalNode LBR() { return getToken(calParser.LBR, 0); }
+		public TerminalNode RBR() { return getToken(calParser.RBR, 0); }
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
@@ -1249,21 +1249,21 @@ public class CALParser extends Parser {
 		public Comp_opContext comp_op() {
 			return getRuleContext(Comp_opContext.class,0);
 		}
-		public TerminalNode True() { return getToken(CALParser.True, 0); }
-		public TerminalNode False() { return getToken(CALParser.False, 0); }
-		public TerminalNode AND() { return getToken(CALParser.AND, 0); }
-		public TerminalNode OR() { return getToken(CALParser.OR, 0); }
+		public TerminalNode True() { return getToken(calParser.True, 0); }
+		public TerminalNode False() { return getToken(calParser.False, 0); }
+		public TerminalNode AND() { return getToken(calParser.AND, 0); }
+		public TerminalNode OR() { return getToken(calParser.OR, 0); }
 		public ConditionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_condition; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterCondition(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterCondition(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitCondition(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitCondition(this);
 		}
 	}
 
@@ -1375,23 +1375,23 @@ public class CALParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Comp_opContext extends ParserRuleContext {
-		public TerminalNode EQUAL() { return getToken(CALParser.EQUAL, 0); }
-		public TerminalNode NONEQ() { return getToken(CALParser.NONEQ, 0); }
-		public TerminalNode LESS() { return getToken(CALParser.LESS, 0); }
-		public TerminalNode LE() { return getToken(CALParser.LE, 0); }
-		public TerminalNode GREATER() { return getToken(CALParser.GREATER, 0); }
-		public TerminalNode GE() { return getToken(CALParser.GE, 0); }
+		public TerminalNode EQUAL() { return getToken(calParser.EQUAL, 0); }
+		public TerminalNode NONEQ() { return getToken(calParser.NONEQ, 0); }
+		public TerminalNode LESS() { return getToken(calParser.LESS, 0); }
+		public TerminalNode LE() { return getToken(calParser.LE, 0); }
+		public TerminalNode GREATER() { return getToken(calParser.GREATER, 0); }
+		public TerminalNode GE() { return getToken(calParser.GE, 0); }
 		public Comp_opContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_comp_op; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterComp_op(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterComp_op(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitComp_op(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitComp_op(this);
 		}
 	}
 
@@ -1439,11 +1439,11 @@ public class CALParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_arg_list; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterArg_list(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterArg_list(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitArg_list(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitArg_list(this);
 		}
 	}
 
@@ -1483,8 +1483,8 @@ public class CALParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Nemp_arg_listContext extends ParserRuleContext {
-		public TerminalNode ID() { return getToken(CALParser.ID, 0); }
-		public TerminalNode COMMA() { return getToken(CALParser.COMMA, 0); }
+		public TerminalNode ID() { return getToken(calParser.ID, 0); }
+		public TerminalNode COMMA() { return getToken(calParser.COMMA, 0); }
 		public Nemp_arg_listContext nemp_arg_list() {
 			return getRuleContext(Nemp_arg_listContext.class,0);
 		}
@@ -1494,11 +1494,11 @@ public class CALParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_nemp_arg_list; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).enterNemp_arg_list(this);
+			if ( listener instanceof calListener ) ((calListener)listener).enterNemp_arg_list(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof CALListener ) ((CALListener)listener).exitNemp_arg_list(this);
+			if ( listener instanceof calListener ) ((calListener)listener).exitNemp_arg_list(this);
 		}
 	}
 

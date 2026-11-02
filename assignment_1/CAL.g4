@@ -1,4 +1,4 @@
-grammar CAL;
+grammar cal;
 
 prog:   dec_list func_list main;
 dec_list:   (dec SEMI)*;
