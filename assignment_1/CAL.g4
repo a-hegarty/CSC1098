@@ -1,4 +1,4 @@
-grammar CAL
+grammar CAL;
 
 prog:   dec_list func_list main;
 dec_list:   (dec SEMI)*;
@@ -33,17 +33,17 @@ statement:  ID ASSIGN expr COLON
     | Skip COLON
     ;
 
-expr:   fragment bin_arith_op fragment
+expr:   frag bin_arith_op frag
     | LBR expr RBR
     | ID LBR arg_list RBR
-    | fragment
+    | frag
     ;
 
 bin_arith_op:   PLUS
     | MINUS
     ;
 
-fragment:   ID
+frag:   ID
     | MINUS ID
     | True
     | False
@@ -99,9 +99,9 @@ fragment X: 'x' | 'X';
 fragment Y: 'y' | 'Y';
 fragment Z: 'z' | 'Z';
 
-fragment Letter:   [a-zA-Z;]
+fragment Letter:   [a-zA-Z;];
 fragment Digit: [0-9]+;
-fragment UnderScore:    "_";
+fragment UnderScore:    '_';
 
 // reserved words
 Variable:   V A R I A B L E;
@@ -122,25 +122,25 @@ Is:         I S;
 Skip:       S K I P;
 
 // symbols
-ASSIGN:     ":=";
-COMMA:      ",";
-COLON:      ":";
-LBR:        "(";
-RBR:        ")";
-PLUS:       "+";
-MINUS:      "-";
-NEG:        "~";
-OR:         "|";
-AND:        "&";
-EQUAL:      "=";
-NONEQ:      "!=";
-LESS:       "<";
-LE:         "<=";
-GREATER:    ">";
-GE:         ">=";
+ASSIGN:     ':=';
+COMMA:      ',';
+COLON:      ':';
+LBR:        '(';
+RBR:        ')';
+PLUS:       '+';
+MINUS:      '-';
+NEG:        '~';
+OR:         '|';
+AND:        '&';
+EQUAL:      '=';
+NONEQ:      '!=';
+LESS:       '<';
+LE:         '<=';
+GREATER:    '>';
+GE:         '>=';
 
-ID:     Letter (Letter | Digit | UnderScore)
+ID:     Letter (Letter | Digit | UnderScore);
 WS:     [ \t\n\r]+->skip;
 
-LineComment:    "//" ~[\r\n]*-> skip;
-Comment:        "/*" (Comment | *)* "*/"-> skip
+LineComment:    '//' ~[\r\n]* -> skip;
+Comment:        '/*' (Comment | (Letter | Digit)*)* '*/' -> skip;
