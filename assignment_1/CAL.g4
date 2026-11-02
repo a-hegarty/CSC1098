@@ -136,3 +136,9 @@ LESS: '<';
 LE: '<=';
 GREATER: '>';
 GE: '>=';
+
+ID:     Letter (Letter | Digit | UnderScore)
+WS:     [ \t\n\r]+->skip;
+
+LineComment:    "//" ~[\r\n]*-> skip;
+Comment:        "/*" (Comment | *)* "*/"-> skip
