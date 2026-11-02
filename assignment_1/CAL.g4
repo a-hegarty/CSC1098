@@ -71,6 +71,7 @@ nemp_arg_list:  ID
 
 fragment Letter:   [a-zA-Z;]
 fragment Digit: [0-9]+;
+fragment UnderScore:    "_";
 
 // reserved words
 Variable:   V A R I A B L E;
