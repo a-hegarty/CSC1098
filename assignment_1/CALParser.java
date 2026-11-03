@@ -465,7 +465,7 @@ public class calParser extends Parser {
 			return getRuleContext(Statement_blockContext.class,0);
 		}
 		public TerminalNode Return() { return getToken(calParser.Return, 0); }
-		public TerminalNode COLON() { return getToken(calParser.COLON, 0); }
+		public TerminalNode SEMI() { return getToken(calParser.SEMI, 0); }
 		public TerminalNode End() { return getToken(calParser.End, 0); }
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
@@ -535,7 +535,7 @@ public class calParser extends Parser {
 			setState(91);
 			match(RBR);
 			setState(92);
-			match(COLON);
+			match(SEMI);
 			setState(93);
 			match(End);
 			}
@@ -846,7 +846,7 @@ public class calParser extends Parser {
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
-		public TerminalNode COLON() { return getToken(calParser.COLON, 0); }
+		public TerminalNode SEMI() { return getToken(calParser.SEMI, 0); }
 		public TerminalNode LBR() { return getToken(calParser.LBR, 0); }
 		public Arg_listContext arg_list() {
 			return getRuleContext(Arg_listContext.class,0);
@@ -904,7 +904,7 @@ public class calParser extends Parser {
 				setState(128);
 				expr();
 				setState(129);
-				match(COLON);
+				match(SEMI);
 				}
 				break;
 			case 2:
@@ -919,7 +919,7 @@ public class calParser extends Parser {
 				setState(134);
 				match(RBR);
 				setState(135);
-				match(COLON);
+				match(SEMI);
 				}
 				break;
 			case 3:
@@ -977,7 +977,7 @@ public class calParser extends Parser {
 				setState(157);
 				match(Skip);
 				setState(158);
-				match(COLON);
+				match(SEMI);
 				}
 				break;
 			}
@@ -1620,7 +1620,7 @@ public class calParser extends Parser {
 		"\u000b\u0000ST\u0005\u0003\u0000\u0000TX\u0005\u0015\u0000\u0000UW\u0003"+
 		"\u001a\r\u0000VU\u0001\u0000\u0000\u0000WZ\u0001\u0000\u0000\u0000XV\u0001"+
 		"\u0000\u0000\u0000XY\u0001\u0000\u0000\u0000Y[\u0001\u0000\u0000\u0000"+
-		"ZX\u0001\u0000\u0000\u0000[\\\u0005\u0016\u0000\u0000\\]\u0005\u0014\u0000"+
+		"ZX\u0001\u0000\u0000\u0000[\\\u0005\u0016\u0000\u0000\\]\u0005\u0012\u0000"+
 		"\u0000]^\u0005\u000e\u0000\u0000^\r\u0001\u0000\u0000\u0000_`\u0007\u0000"+
 		"\u0000\u0000`\u000f\u0001\u0000\u0000\u0000ac\u0003\u0012\t\u0000ba\u0001"+
 		"\u0000\u0000\u0000cf\u0001\u0000\u0000\u0000db\u0001\u0000\u0000\u0000"+
@@ -1635,10 +1635,10 @@ public class calParser extends Parser {
 		"\u0000\u0000z}\u0001\u0000\u0000\u0000{y\u0001\u0000\u0000\u0000{|\u0001"+
 		"\u0000\u0000\u0000|\u0017\u0001\u0000\u0000\u0000}{\u0001\u0000\u0000"+
 		"\u0000~\u007f\u0005\"\u0000\u0000\u007f\u0080\u0005\u0011\u0000\u0000"+
-		"\u0080\u0081\u0003\u001a\r\u0000\u0081\u0082\u0005\u0014\u0000\u0000\u0082"+
+		"\u0080\u0081\u0003\u001a\r\u0000\u0081\u0082\u0005\u0012\u0000\u0000\u0082"+
 		"\u00a0\u0001\u0000\u0000\u0000\u0083\u0084\u0005\"\u0000\u0000\u0084\u0085"+
 		"\u0005\u0015\u0000\u0000\u0085\u0086\u0003$\u0012\u0000\u0086\u0087\u0005"+
-		"\u0016\u0000\u0000\u0087\u0088\u0005\u0014\u0000\u0000\u0088\u00a0\u0001"+
+		"\u0016\u0000\u0000\u0087\u0088\u0005\u0012\u0000\u0000\u0088\u00a0\u0001"+
 		"\u0000\u0000\u0000\u0089\u008a\u0005\r\u0000\u0000\u008a\u008b\u0003\u0016"+
 		"\u000b\u0000\u008b\u008c\u0005\u000e\u0000\u0000\u008c\u00a0\u0001\u0000"+
 		"\u0000\u0000\u008d\u008e\u0005\b\u0000\u0000\u008e\u008f\u0003 \u0010"+
@@ -1649,7 +1649,7 @@ public class calParser extends Parser {
 		"\u0005\f\u0000\u0000\u0098\u0099\u0003 \u0010\u0000\u0099\u009a\u0005"+
 		"\r\u0000\u0000\u009a\u009b\u0003\u0016\u000b\u0000\u009b\u009c\u0005\u000e"+
 		"\u0000\u0000\u009c\u00a0\u0001\u0000\u0000\u0000\u009d\u009e\u0005\u0010"+
-		"\u0000\u0000\u009e\u00a0\u0005\u0014\u0000\u0000\u009f~\u0001\u0000\u0000"+
+		"\u0000\u0000\u009e\u00a0\u0005\u0012\u0000\u0000\u009f~\u0001\u0000\u0000"+
 		"\u0000\u009f\u0083\u0001\u0000\u0000\u0000\u009f\u0089\u0001\u0000\u0000"+
 		"\u0000\u009f\u008d\u0001\u0000\u0000\u0000\u009f\u0097\u0001\u0000\u0000"+
 		"\u0000\u009f\u009d\u0001\u0000\u0000\u0000\u00a0\u0019\u0001\u0000\u0000"+

@@ -11,7 +11,7 @@ var_dec:    Variable ID COLON type;
 const_dec:  Constant ID COLON type ASSIGN expr;
 
 func_list:  (func*);
-func:   type ID LBR param_list RBR Is dec_list Begin statement_block Return LBR (expr*) RBR COLON End;
+func:   type ID LBR param_list RBR Is dec_list Begin statement_block Return LBR (expr*) RBR SEMI End;
 
 type:   Integer
     | Boolean
@@ -25,12 +25,12 @@ nemp_param_list:    ID COLON type
 
 main:   Main Begin dec_list statement_block End;
 statement_block:    (statement*);
-statement:  ID ASSIGN expr COLON
-    | ID LBR arg_list RBR COLON
+statement:  ID ASSIGN expr SEMI
+    | ID LBR arg_list RBR SEMI
     | Begin statement_block End
     | If condition Begin statement_block End Else Begin statement_block End
     | While condition Begin statement_block End
-    | Skip COLON
+    | Skip SEMI
     ;
 
 expr:   frag bin_arith_op frag
