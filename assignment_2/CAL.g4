@@ -1,4 +1,5 @@
 grammar CAL
+// copied from assignment 1
 
 prog:   dec_list func_list main;
 dec_list:   (dec SEMI)*;
