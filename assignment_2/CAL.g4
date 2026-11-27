@@ -1,5 +1,4 @@
-grammar CAL
-// copied from assignment 1
+grammar cal;
 
 prog:   dec_list func_list main;
 dec_list:   (dec SEMI)*;
@@ -12,7 +11,7 @@ var_dec:    Variable ID COLON type;
 const_dec:  Constant ID COLON type ASSIGN expr;
 
 func_list:  (func*);
-func:   type ID LBR param_list RBR Is dec_list Begin statement_block Return LBR (expr*) RBR COLON End;
+func:   type ID LBR param_list RBR Is dec_list Begin statement_block Return LBR (expr*) RBR SEMI End;
 
 type:   Integer
     | Boolean
@@ -26,29 +25,29 @@ nemp_param_list:    ID COLON type
 
 main:   Main Begin dec_list statement_block End;
 statement_block:    (statement*);
-statement:  ID ASSIGN expr COLON
-    | ID LBR arg_list RBR COLON
+statement:  ID ASSIGN expr SEMI
+    | ID LBR arg_list RBR SEMI
     | Begin statement_block End
     | If condition Begin statement_block End Else Begin statement_block End
     | While condition Begin statement_block End
-    | Skip COLON
+    | Skip SEMI
     ;
 
-expr:   fragment bin_arith_op fragment
+expr:   frag bin_arith_op frag
     | LBR expr RBR
     | ID LBR arg_list RBR
-    | fragment
+    | LBR frag RBR
     ;
 
 bin_arith_op:   PLUS
     | MINUS
     ;
 
-fragment:   ID
+frag:   ID
     | MINUS ID
     | True
     | False
-    | expr
+    | LBR expr RBR
     ;
 
 condition:  NEG condition
@@ -100,9 +99,9 @@ fragment X: 'x' | 'X';
 fragment Y: 'y' | 'Y';
 fragment Z: 'z' | 'Z';
 
-fragment Letter:   [a-zA-Z;]
+fragment Letter:   [a-zA-Z;];
 fragment Digit: [0-9]+;
-fragment UnderScore:    "_";
+fragment UnderScore:    '_';
 
 // reserved words
 Variable:   V A R I A B L E;
@@ -123,25 +122,26 @@ Is:         I S;
 Skip:       S K I P;
 
 // symbols
-ASSIGN:     ":=";
-COMMA:      ",";
-COLON:      ":";
-LBR:        "(";
-RBR:        ")";
-PLUS:       "+";
-MINUS:      "-";
-NEG:        "~";
-OR:         "|";
-AND:        "&";
-EQUAL:      "=";
-NONEQ:      "!=";
-LESS:       "<";
-LE:         "<=";
-GREATER:    ">";
-GE:         ">=";
+ASSIGN:     ':=';
+SEMI:       ';';
+COMMA:      ',';
+COLON:      ':';
+LBR:        '(';
+RBR:        ')';
+PLUS:       '+';
+MINUS:      '-';
+NEG:        '~';
+OR:         '|';
+AND:        '&';
+EQUAL:      '=';
+NONEQ:      '!=';
+LESS:       '<';
+LE:         '<=';
+GREATER:    '>';
+GE:         '>=';
 
-ID:     Letter (Letter | Digit | UnderScore)
+ID:     Letter (Letter | Digit | UnderScore);
 WS:     [ \t\n\r]+->skip;
 
-LineComment:    "//" ~[\r\n]*-> skip;
-Comment:        "/*" (Comment | *)* "*/"-> skip
+LineComment:    '//' ~[\r\n]* -> skip;
+Comment:        '/*' (Comment | .)*? '*/' -> skip;
