@@ -1,7 +1,4 @@
 // Generated from cal.g4 by ANTLR 4.13.2
-
-    import org.antlr.symbols.*;
-
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -123,6 +120,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_prog; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterProg(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitProg(this);
+		}
 	}
 
 	public final ProgContext prog() throws RecognitionException {
@@ -166,6 +171,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_dec_list; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterDec_list(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitDec_list(this);
+		}
 	}
 
 	public final Dec_listContext dec_list() throws RecognitionException {
@@ -216,6 +229,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_dec; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterDec(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitDec(this);
+		}
 	}
 
 	public final DecContext dec() throws RecognitionException {
@@ -266,6 +287,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_var_dec; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterVar_dec(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitVar_dec(this);
+		}
 	}
 
 	public final Var_decContext var_dec() throws RecognitionException {
@@ -311,6 +340,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_const_dec; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterConst_dec(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitConst_dec(this);
+		}
 	}
 
 	public final Const_decContext const_dec() throws RecognitionException {
@@ -356,6 +393,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_func_list; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterFunc_list(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitFunc_list(this);
+		}
 	}
 
 	public final Func_listContext func_list() throws RecognitionException {
@@ -432,6 +477,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_func; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterFunc(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitFunc(this);
+		}
 	}
 
 	public final FuncContext func() throws RecognitionException {
@@ -507,6 +560,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_type; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterType(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitType(this);
+		}
 	}
 
 	public final TypeContext type() throws RecognitionException {
@@ -551,6 +612,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_param_list; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterParam_list(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitParam_list(this);
+		}
 	}
 
 	public final Param_listContext param_list() throws RecognitionException {
@@ -602,6 +671,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_nemp_param_list; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterNemp_param_list(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitNemp_param_list(this);
+		}
 	}
 
 	public final Nemp_param_listContext nemp_param_list() throws RecognitionException {
@@ -665,6 +742,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_main; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterMain(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitMain(this);
+		}
 	}
 
 	public final MainContext main() throws RecognitionException {
@@ -708,6 +793,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_statement_block; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterStatement_block(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitStatement_block(this);
+		}
 	}
 
 	public final Statement_blockContext statement_block() throws RecognitionException {
@@ -784,6 +877,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_statement; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterStatement(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitStatement(this);
+		}
 	}
 
 	public final StatementContext statement() throws RecognitionException {
@@ -916,6 +1017,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_expr; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterExpr(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitExpr(this);
+		}
 	}
 
 	public final ExprContext expr() throws RecognitionException {
@@ -992,6 +1101,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_bin_arith_op; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterBin_arith_op(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitBin_arith_op(this);
+		}
 	}
 
 	public final Bin_arith_opContext bin_arith_op() throws RecognitionException {
@@ -1039,6 +1156,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_frag; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterFrag(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitFrag(this);
+		}
 	}
 
 	public final FragContext frag() throws RecognitionException {
@@ -1132,6 +1257,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_condition; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterCondition(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitCondition(this);
+		}
 	}
 
 	public final ConditionContext condition() throws RecognitionException {
@@ -1252,6 +1385,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_comp_op; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterComp_op(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitComp_op(this);
+		}
 	}
 
 	public final Comp_opContext comp_op() throws RecognitionException {
@@ -1296,6 +1437,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_arg_list; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterArg_list(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitArg_list(this);
+		}
 	}
 
 	public final Arg_listContext arg_list() throws RecognitionException {
@@ -1343,6 +1492,14 @@ public class calParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_nemp_arg_list; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).enterNemp_arg_list(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof calListener ) ((calListener)listener).exitNemp_arg_list(this);
+		}
 	}
 
 	public final Nemp_arg_listContext nemp_arg_list() throws RecognitionException {
