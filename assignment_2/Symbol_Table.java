@@ -9,12 +9,4 @@ public class Symbol_Table{
     String scope;
     Symbol_Table parent;
     HashMap<String, symtabEntry> table;
-    
-    public class symtabEntry{
-        String symbol;
-        Symbol_Table parentSymTab;
-        Symbol_Table subscopeSymTab;
-        boolean isConst;
-    }
-
 }
