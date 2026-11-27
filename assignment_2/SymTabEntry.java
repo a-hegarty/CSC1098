@@ -5,7 +5,7 @@ public class SymTabEntry{
         boolean isConst; // if the symbol is readonly
 
         public SymTabEntry(String symbol, Symbol_Table parentSymTab, Symbol_Table subscopeSymTab, boolean isConst){
-            this.symbol = symbol; //symbol
+            this.symbol = symbol;
             this.parentSymTab = parentSymTab;
             this.subscopeSymTab = subscopeSymTab;
             this.isConst = isConst;
@@ -13,7 +13,7 @@ public class SymTabEntry{
 
         // second declaration in case the sumbol does not reference any sub-scope symbol tables
         public SymTabEntry(String symbol, Symbol_Table parentSymTab, boolean isConst){
-            this.symbol = symbol; //symbol
+            this.symbol = symbol;
             this.parentSymTab = parentSymTab;
             this.isConst = isConst;
         }
